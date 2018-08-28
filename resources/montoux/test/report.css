@@ -1,0 +1,155 @@
+body {
+    font-family: Avenir, sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    margin: 0;
+}
+
+.root {
+    margin: 0;
+    padding-top: 4ex;
+}
+
+.root > .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #aaa;
+}
+
+.root.pass > .header {
+    background-color: rgb(210, 238, 207);
+    border-bottom: 1px solid #35ae29;
+}
+
+.root.fail > .header {
+    background-color: rgb(241, 192, 191);
+    border-bottom: 1px solid #ca0900;
+}
+
+.summary {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.summary_bar {
+    display: inline-block;
+    -webkit-flex: 1 0 150px;
+    flex: 1 0 150px;
+    height: 2.5ex;
+    background-color: #ca0900;
+}
+
+.summary_bar .success {
+    display: block;
+    background-color: #35ae29;
+    height: 100%;
+}
+
+.summary_percent, .summary_ratio {
+    flex: 0 1 3em;
+    padding: 0 1em;
+    text-align: right;
+}
+
+.header {
+    display: -webkit-flex;
+    display: flex;
+    padding: 4px 16px 4px 8px;
+}
+
+.has-children > .header:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.header > * {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.namespace_vars {
+    margin: 0 -9px 0 -9px;
+    border: 1px solid #ddd;
+    background-color: #eee;
+    padding: 0 8px;
+}
+
+.var > .header a {
+    padding-left: 16px;
+}
+
+.test {
+    padding: 8px 24px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.test_body {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.test_body th {
+    width: 6em;
+    font-weight: normal;
+    text-align: left;
+}
+
+.test_body td {
+    overflow: auto;
+}
+
+.test_body pre {
+    margin: 0;
+}
+
+.test_about {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.test_about * {
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+.test_location {
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    opacity: 0.5;
+    font-size: smaller;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 1em;
+}
+
+.header,
+.test {
+    border-left: 8px solid transparent;
+}
+
+.pass > .header,
+.test.pass {
+    border-left-color: #35ae29;
+}
+
+.fail > .header,
+.test.fail,
+.test.error {
+    border-left-color: #ca0900;
+}
+
+.diff .added {
+    background-color: #35ae29;
+}
+
+.diff .removed {
+    background-color: #ca0900;
+}
