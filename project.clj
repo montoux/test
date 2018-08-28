@@ -1,4 +1,4 @@
-(defproject montoux/test "1.0.0"
+(defproject montoux/test "1.0.1-SNAPSHOT"
   :description "Testing utilities for Clojurescript, including interactive HTML test output."
   :license {:name "Eclipse Public License"
             :url  "http://www.eclipse.org/legal/epl-v10.html"}
